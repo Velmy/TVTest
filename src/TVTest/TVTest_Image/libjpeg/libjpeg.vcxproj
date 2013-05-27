@@ -152,8 +152,10 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="jaricom.c" />
     <ClCompile Include="jcapimin.c" />
     <ClCompile Include="jcapistd.c" />
+    <ClCompile Include="jcarith.c" />
     <ClCompile Include="jccoefct.c" />
     <ClCompile Include="jccolor.c" />
     <ClCompile Include="jcdctmgr.c" />
@@ -164,12 +166,12 @@
     <ClCompile Include="jcmaster.c" />
     <ClCompile Include="jcomapi.c" />
     <ClCompile Include="jcparam.c" />
-    <ClCompile Include="jcphuff.c" />
     <ClCompile Include="jcprepct.c" />
     <ClCompile Include="jcsample.c" />
     <ClCompile Include="jctrans.c" />
     <ClCompile Include="jdapimin.c" />
     <ClCompile Include="jdapistd.c" />
+    <ClCompile Include="jdarith.c" />
     <ClCompile Include="jdatadst.c" />
     <ClCompile Include="jdatasrc.c" />
     <ClCompile Include="jdcoefct.c" />
@@ -181,7 +183,6 @@
     <ClCompile Include="jdmarker.c" />
     <ClCompile Include="jdmaster.c" />
     <ClCompile Include="jdmerge.c" />
-    <ClCompile Include="jdphuff.c" />
     <ClCompile Include="jdpostct.c" />
     <ClCompile Include="jdsample.c" />
     <ClCompile Include="jdtrans.c" />
@@ -192,7 +193,6 @@
     <ClCompile Include="jidctflt.c" />
     <ClCompile Include="jidctfst.c" />
     <ClCompile Include="jidctint.c" />
-    <ClCompile Include="jidctred.c" />
     <ClCompile Include="jmemmgr.c" />
     <ClCompile Include="jmemnobs.c" />
     <ClCompile Include="jquant1.c" />
@@ -215,9 +215,7 @@
   <ItemGroup>
     <ClInclude Include="cderror.h" />
     <ClInclude Include="cdjpeg.h" />
-    <ClInclude Include="jchuff.h" />
     <ClInclude Include="jdct.h" />
-    <ClInclude Include="jdhuff.h" />
     <ClInclude Include="jerror.h" />
     <ClInclude Include="jinclude.h" />
     <ClInclude Include="jmemsys.h" />
