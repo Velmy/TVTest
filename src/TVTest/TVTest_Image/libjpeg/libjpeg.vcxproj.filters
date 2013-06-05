@@ -9,6 +9,15 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\simd">
+      <UniqueIdentifier>{13db94fd-6d3c-49d6-8ecb-2a69e1369858}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\simd">
+      <UniqueIdentifier>{71792c8a-fb0d-4140-9e1b-48b4049e8e60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\win">
+      <UniqueIdentifier>{53c28394-f57b-45bd-849e-f78d2ce3fc65}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="jaricom.c">
@@ -188,6 +197,27 @@
     <ClCompile Include="wrtarga.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="jcphuff.c">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="jdphuff.c">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="jidctred.c">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="jsimd_none.c">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="rdjpgcom.c">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="simd\jsimd_i386.c">
+      <Filter>ソース ファイル\simd</Filter>
+    </ClCompile>
+    <ClCompile Include="simd\jsimd_x86_64.c">
+      <Filter>ソース ファイル\simd</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cderror.h">
@@ -196,7 +226,13 @@
     <ClInclude Include="cdjpeg.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="jchuff.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
     <ClInclude Include="jdct.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="jdhuff.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="jerror.h">
@@ -211,10 +247,19 @@
     <ClInclude Include="jmorecfg.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="jpegcomp.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
     <ClInclude Include="jpegint.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="jpeglib.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="jsimd.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="jsimddct.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="jversion.h">
@@ -223,5 +268,171 @@
     <ClInclude Include="transupp.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="simd\jsimd.h">
+      <Filter>ヘッダー ファイル\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="simd\jsimdcfg.inc.h">
+      <Filter>ヘッダー ファイル\simd</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="simd\jisseflt.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jiss2red.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jiss2red-64.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jiss2int.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jiss2int-64.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jiss2fst.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jiss2fst-64.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jiss2flt.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jiss2flt-64.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jimmxred.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jimmxint.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jimmxfst.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\ji3dnflt.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jfsseflt.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jfsseflt-64.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jfss2int.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jfss2int-64.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jfss2fst.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jfss2fst-64.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jfmmxint.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jfmmxfst.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jf3dnflt.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jdsamss2.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jdsamss2-64.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jdsammmx.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jdmerss2.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jdmerss2-64.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jdmermmx.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jdcolss2.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jdcolss2-64.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jdcolmmx.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jcsamss2.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jcsamss2-64.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jcsammmx.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jcqntsse.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jcqnts2i.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jcqnts2i-64.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jcqnts2f.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jcqnts2f-64.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jcqntmmx.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jcqnt3dn.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jcgrass2.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jcgrass2-64.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jcgrammx.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jccolss2.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jccolss2-64.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jccolmmx.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd\jsimdcpu.asm">
+      <Filter>ソース ファイル\simd</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="simd\jsimdext.inc">
+      <Filter>ソース ファイル\simd</Filter>
+    </None>
+    <None Include="simd\jcolsamp.inc">
+      <Filter>ソース ファイル\simd</Filter>
+    </None>
+    <None Include="simd\jdct.inc">
+      <Filter>ソース ファイル\simd</Filter>
+    </None>
+    <None Include="win\jsimdcfg.inc">
+      <Filter>ソース ファイル\win</Filter>
+    </None>
   </ItemGroup>
 </Project>

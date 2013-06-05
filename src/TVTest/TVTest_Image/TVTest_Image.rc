@@ -29,7 +29,7 @@ BEGIN
 								" [libpng:" TVTEST_IMAGE_LIBPNG "]"
 #endif
 #ifdef TVTEST_IMAGE_LIBJPEG
-								" [libjpeg:" TVTEST_IMAGE_LIBJPEG "]"
+								" [" TVTEST_IMAGE_LIBJPEG_NAME ":" TVTEST_IMAGE_LIBJPEG "]"
 #endif
 								"\0"
 			VALUE "CompanyName", APP_NAME_A "\0"
