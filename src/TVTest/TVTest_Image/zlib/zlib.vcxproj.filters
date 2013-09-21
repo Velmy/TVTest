@@ -9,6 +9,12 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\masmx64">
+      <UniqueIdentifier>{c6abcc54-a3be-43d4-8d96-c77ddb380d7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\masmx86">
+      <UniqueIdentifier>{dd84111d-27a4-42e9-8d13-e371ffaa5c87}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="adler32.c">
@@ -43,6 +49,9 @@
     </ClCompile>
     <ClCompile Include="zutil.c">
       <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="masmx64\inffas8664.c">
+      <Filter>ソース ファイル\masmx64</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -79,5 +88,19 @@
     <ClInclude Include="zutil.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="masmx64\gvmat64.asm">
+      <Filter>ソース ファイル\masmx64</Filter>
+    </CustomBuild>
+    <CustomBuild Include="masmx64\inffasx64.asm">
+      <Filter>ソース ファイル\masmx64</Filter>
+    </CustomBuild>
+    <CustomBuild Include="masmx86\inffas32.asm">
+      <Filter>ソース ファイル\masmx86</Filter>
+    </CustomBuild>
+    <CustomBuild Include="masmx86\match686.asm">
+      <Filter>ソース ファイル\masmx86</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
